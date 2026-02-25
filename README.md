@@ -1,18 +1,34 @@
-# Flappython 🐦
-
+# FLAPPYTHON
 ## Twist Name
-**Random Gravity Flip**
-
+Random Gravity Flip
 ## One Sentence Description
-Gravity randomly flips direction every few seconds, forcing the player to constantly adapt their movement and spatial awareness.
-
+Every few seconds gravity randomly flips direction, forcing the player to instantly adapt their flapping rhythm and spatial awareness to survive.
 ## How It Works
-- Every 3–7 seconds, `Physics2D.gravity` is negated, instantly pulling the bird in the opposite direction
-- 1 second before each flip, a warning plays — the arrow image smoothly rotates 180° to show the new gravity direction, the "GRAVITY FLIPPING!" text bounces onto screen, and the screen pulses orange
-- On flip, the bird's sprite is flipped vertically so it always appears upright relative to gravity
-- The jump input automatically reverses direction to match the current gravity, so Space always pushes the bird *away* from the current pull
-- If the bird flies off the top or bottom of the screen, death is triggered just like hitting a pipe
+- A timer randomly triggers a gravity flip every 3 to 7 seconds.
+- One second before the flip, a warning plays — the arrow image rotates 180° to show the new direction while "GRAVITY FLIPPING!" bounces onto the screen.
+- The screen pulses orange as a final one-second alert before the flip occurs.
+- On flip, `Physics2D.gravity` is negated and the bird sprite is flipped vertically to stay visually upright.
+- The jump input automatically reverses so Space always pushes the bird away from the current gravity direction.
+## Why It Fits Flappy
+- Preserves the original one-tap control and endless scoring system while adding an unpredictable layer of challenge.
+- The narrow pipe gaps become twice as punishing when gravity is unpredictable, raising the skill ceiling without changing any level design.
+## Controls
+- SPACE → Flap
+- Mouse Click → Start
+## Setup
+1. Clone or download this repository
+2. Open Unity Hub → click Add → select the `Flappython` folder
+3. Let Unity import all assets, then open the main scene
+4. Press Play to run the game in the editor
 
-## Why It Fits Flappy Bird
-- Flappy Bird's core challenge is precise, rhythmic tapping — flipping gravity completely disrupts that rhythm and forces the player to re-learn timing on the fly, dramatically raising the skill ceiling
-- The narrow pipe gaps become twice as deadly when gravity is unpredictable, keeping the tension high without changing any level design
+OR
+
+1. Run `Flappython.exe`
+2. Press SPACE to start flapping
+3. Survive as long as possible and pass through pipes to increase your score
+## Asset Credits
+- Developed using Unity 2D
+- UI text rendered using TextMeshPro
+- Sprites sourced from [The Spriters Resource — Mobile Flappy Bird Miscellaneous Version 1.2](https://www.spriters-resource.com/mobile/flappybird/asset/59894/)
+
+Developed by Vinayak More & Yash Choudhary
